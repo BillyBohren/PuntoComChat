@@ -1,0 +1,43 @@
+
+INSERT INTO public.persona(id,nombre,password,usuario) values(1,'Jorge Martinez','jmartinez','123456')
+INSERT INTO public.persona(id,nombre,password,usuario) values(2,'Daniel Quiroga','dquiroga','123456')
+
+
+SELECT * FROM persona
+
+INSERT INTO public.mensaje(id,fechaenviado,fechaleido,leido,mensaje,id_persona_destinatario,id_persona_remitente) 
+values(1,current_timestamp,null,false,'hola',1,2)
+
+INSERT INTO public.mensaje(id,fechaenviado,fechaleido,leido,mensaje,id_persona_destinatario,id_persona_remitente) 
+values(2,current_timestamp,null,false,'hola Daniel, que tal?',2,1)
+
+
+SELECT * FROM mensaje
+
+SELECT * FROM mensaje where id_persona_destinatario = 2 and fechaleido isnull
+
+
+
+
+
+-----------
+ANGULAR:
+-----------
+
+*INSTALAR ANGULAR:
+
+npm install -g @angular/cli
+
+-------------------------------
+
+*crear proyecto vacio:
+
+npx ng new chatfront
+
+* instalar bootstrap
+npm install bootstrap jquery @popperjs/core
+
+
+
+*crear componentes
+
